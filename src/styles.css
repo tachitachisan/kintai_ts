@@ -1,0 +1,94 @@
+body {
+  font-family: sans-serif;
+  background-color: #c4c7bf;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding: 6px 16px;
+  outline: none;
+}
+
+button {
+  border-radius: 16px;
+  background-color: #bffcd8;
+  border: none;
+  padding: 4px 16px;
+}
+
+button:hover {
+  background-color: #7cfc00;
+  color: #ca3434;
+  cursor: pointer;
+}
+
+li {
+  margin-right: 8px;
+}
+
+.input-area {
+  background-color: #626464;
+  width: 600px;
+  height: 30px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.incomplete-area {
+  background-color: #c6ffe2;
+  width: 400px;
+  min-height: 200px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.complete-area {
+  background-color: #ffffe0;
+  width: 400px;
+  min-height: 200px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.dayAttendance {
+  background-color: #da70d6;
+  width: 400px;
+  height: "70px";
+  padding: "8px";
+  margin: "8px";
+  border-Radius: "8px";
+  list-style: none;
+}
+
+.monthAttendance-area {
+  background-color: #c6caff;
+  width: 600px;
+  min-height: 200px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.header {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
+}
