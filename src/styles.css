@@ -11,10 +11,11 @@ input {
 }
 
 button {
-  border-radius: 16px;
+  border-radius: 8px;
   background-color: #bffcd8;
   border: none;
-  padding: 4px 16px;
+  padding: 3px px;
+  border: 1px solid #1a1a1a;
 }
 
 button:hover {
@@ -58,7 +59,8 @@ li {
   text-align: center;
   margin-top: 0;
   font-weight: bold;
-  color: #666;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
 }
 
 .list-row {
@@ -68,17 +70,18 @@ li {
 }
 
 .dayAttendance {
-  background-color: #da70d6;
+  background-color: #ffffff;
   width: 400px;
   height: "70px";
   padding: "8px";
   margin: "8px";
   border-Radius: "8px";
   list-style: none;
+  border: 1px solid #1a1a1a;
 }
 
 .monthAttendance-area {
-  background-color: #c6caff;
+  background-color: #626464;
   width: 600px;
   min-height: 200px;
   padding: 8px;
@@ -91,4 +94,16 @@ li {
   margin-top: 0;
   font-weight: bold;
   color: #666;
+}
+
+.dayArea {
+  display: inline-block;
+  width: 60px;
+  /* border: 1px solid #1a1a1a; */
+}
+
+.statusArea {
+  display: inline-block;
+  width: 100px;
+  /* border: 1px solid #1a1a1a; */
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Title = (props) => {
+export const Title = (props: { thisYear: any; thisMonth: any; }) => {
     const { thisYear, thisMonth } = props;
   return (
     <p className="title">

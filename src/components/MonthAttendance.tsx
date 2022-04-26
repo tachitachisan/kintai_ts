@@ -8,8 +8,8 @@ export const MonthAttendance = (props: { monAtt: any; onClickAttendance: any; on
           {monAtt.map((attText:string, index:number) => {
             return (                
               <li className="dayAttendance">
-              <span>{index+1}日　 </span>
-              <span>{attText}</span>
+              <span className="dayArea">{index+1}日　 </span>
+              <span className="statusArea">{attText}</span>
               <button onClick={() => onClickAttendance(index)}>
                 出勤
               </button>
