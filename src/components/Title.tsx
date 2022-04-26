@@ -1,10 +1,8 @@
-import React from "react";
-
-export const Title = (props: { thisYear: any; thisMonth: any; }) => {
-    const { thisYear, thisMonth } = props;
+export const Title = (props: { targetYear: any; targetMonth: any; }) => {
+    const { targetYear, targetMonth } = props;
   return (
     <p className="title">
-      {thisYear}年{thisMonth}月の勤務表
+      {targetYear}年{targetMonth}月の勤務表
     </p>
   );
 };

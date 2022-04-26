@@ -8,6 +8,8 @@ input {
   border: none;
   padding: 6px 16px;
   outline: none;
+  margin: 5px;
+  width: 30px;
 }
 
 button {
@@ -15,6 +17,7 @@ button {
   background-color: #bffcd8;
   border: none;
   padding: 3px px;
+  margin: 0 5px;
   border: 1px solid #1a1a1a;
 }
 
@@ -25,32 +28,21 @@ button:hover {
 }
 
 li {
-  margin-right: 8px;
+  margin-right: 1px;
+}
+
+.header {
+  text-align:left;
+  margin-top: 0;
+  font-weight: bold;
+  color: #666;
 }
 
 .input-area {
-  background-color: #626464;
-  width: 600px;
-  height: 30px;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 8px;
-}
-
-.incomplete-area {
-  background-color: #c6ffe2;
-  width: 400px;
-  min-height: 200px;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 8px;
-}
-
-.complete-area {
-  background-color: #ffffe0;
-  width: 400px;
-  min-height: 200px;
-  padding: 8px;
+  background-color: #858686;
+  width: 300px;
+  height: 40px;
+  /* padding: 8px; */
   margin: 8px;
   border-radius: 8px;
 }
@@ -63,47 +55,33 @@ li {
   font-size: 25px;
 }
 
-.list-row {
-  display: flex;
-  align-items: center;
-  padding-bottom: 4px;
-}
-
-.dayAttendance {
-  background-color: #ffffff;
-  width: 400px;
-  height: "70px";
-  padding: "8px";
-  margin: "8px";
-  border-Radius: "8px";
-  list-style: none;
-  border: 1px solid #1a1a1a;
-}
-
 .monthAttendance-area {
   background-color: #626464;
-  width: 600px;
+  width: 500px;
   min-height: 200px;
   padding: 8px;
   margin: 8px;
   border-radius: 8px;
 }
 
-.header {
-  text-align: center;
-  margin-top: 0;
-  font-weight: bold;
-  color: #666;
+.dayAttendance-list {
+  background-color: #ffffff;
+  width: 400px;
+  height: 26px;
+  /* padding: 8px; */
+  margin: 0 5px 0 5px;
+  border-Radius: 4px;
+  list-style: none;
+  border: 1px solid #1a1a1a;
 }
 
-.dayArea {
+.dayAttendance-day {
   display: inline-block;
   width: 60px;
-  /* border: 1px solid #1a1a1a; */
+  text-align: right;
 }
 
-.statusArea {
+.dayAttendance-status {
   display: inline-block;
   width: 100px;
-  /* border: 1px solid #1a1a1a; */
 }
