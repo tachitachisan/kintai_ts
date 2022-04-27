@@ -5,7 +5,7 @@ export const MonthAttendance = (props: { monthAttendance: any; onClickAttendance
       <ul>
         {monthAttendance.map((attendanceText: string, index: number) => {
           return (
-            <li className="dayAttendance-list">
+            <li key={index} className="dayAttendance-list">
               <span className="dayAttendance-day">{index + 1}日　 </span>
               <span className="dayAttendance-status">{attendanceText}</span>
               <span className="dayAttendance-time">{monthAttendanceTime[index]}時間 </span>

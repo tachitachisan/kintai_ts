@@ -5,6 +5,7 @@ import { Title } from "./components/Title";
 import { InputMonth } from "./components/InputMonth";
 import "./styles.css";
 import { InputAttendanceTime } from './components/InputAttendanceTime';
+import { AttendanceTimeSum } from './components/AttendanceTimeSum';
 
 function App() {
   const [targetYear, setTargetYear] = useState("");
@@ -35,7 +36,6 @@ function App() {
     const newMonthAttendanceTime: string[] = [...monthAttendanceTime];
     newMonthAttendanceTime[index] = attendanceTimeText;
     setMonthAttendanceTime(newMonthAttendanceTime);
-    console.log(monthAttendanceTime);
   };
   const onClickAttendance = (index: number) => {
     const newMonthAttendance: string[] = [...monthAttendance];
@@ -72,6 +72,9 @@ function App() {
           />
           <InputAttendanceTime
             onChangeAttendanceTimeText={onChangeAttendanceTimeText}
+          />
+          <AttendanceTimeSum
+            monthAttendanceTime={monthAttendanceTime}
           />
           <MonthAttendance
             monthAttendance={monthAttendance}
