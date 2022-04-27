@@ -83,5 +83,15 @@ li {
 
 .dayAttendance-status {
   display: inline-block;
-  width: 100px;
+  width: 70px;
+}
+
+.dayAttendance-time {
+  display: inline-block;
+  width: 60px;
+}
+
+.dayAttendance-timeButton {
+  background-color: rgb(161, 167, 245);
+
 }

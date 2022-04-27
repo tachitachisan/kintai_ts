@@ -4,6 +4,7 @@ import { MonthAttendance } from "./components/MonthAttendance";
 import { Title } from "./components/Title";
 import { InputMonth } from "./components/InputMonth";
 import "./styles.css";
+import { InputAttendanceTime } from './components/InputAttendanceTime';
 
 function App() {
   const [targetYear, setTargetYear] = useState("");
@@ -11,9 +12,12 @@ function App() {
   const [targetMonth, setTargetMonth] = useState("");
   const [targetMonthText, setTargetMonthText] = useState("");
   const [monthAttendance, setMonthAttendance] = useState<string[]>([]);
+  const [attendanceTimeText, setAttendanceTimeText] = useState("");
+  const [monthAttendanceTime, setMonthAttendanceTime] = useState<string[]>([]);
 
   const onChangeYearText = (event: { target: { value: SetStateAction<string>; }; }) => setTargetYearText(event.target.value);
   const onChangeMonthText = (event: { target: { value: SetStateAction<string>; }; }) => setTargetMonthText(event.target.value);
+  const onChangeAttendanceTimeText = (event: { target: { value: SetStateAction<string>; }; }) => setAttendanceTimeText(event.target.value);
 
   const onClickDecision = () => {
     let targetMonthDays;
@@ -23,6 +27,15 @@ function App() {
     targetMonthDays = monthDays(targetYearText, targetMonthText);
     const arrayAttendance: string[] = new Array(targetMonthDays).fill("未入力");
     setMonthAttendance(arrayAttendance);
+    const arrayAttendanceTime: string[] = new Array(targetMonthDays).fill("0");
+    setMonthAttendanceTime(arrayAttendanceTime);
+  };
+  const onClickTimeFix = (index: number) => {
+    if (attendanceTimeText === "") return;
+    const newMonthAttendanceTime: string[] = [...monthAttendanceTime];
+    newMonthAttendanceTime[index] = attendanceTimeText;
+    setMonthAttendanceTime(newMonthAttendanceTime);
+    console.log(monthAttendanceTime);
   };
   const onClickAttendance = (index: number) => {
     const newMonthAttendance: string[] = [...monthAttendance];
@@ -50,16 +63,25 @@ function App() {
         onChangeYearText={onChangeYearText}
         onClick={onClickDecision}
       />
-      <Title
-        targetYear={targetYear}
-        targetMonth={targetMonth}
-      />
+
       {(targetMonth !== "" && targetYear !== "") && (
-        <MonthAttendance
-          monthAttendance={monthAttendance}
-          onClickAttendance={onClickAttendance}
-          onClickHoliday={onClickHoliday}
-        />
+        <div>
+          <Title
+            targetYear={targetYear}
+            targetMonth={targetMonth}
+          />
+          <InputAttendanceTime
+            onChangeAttendanceTimeText={onChangeAttendanceTimeText}
+          />
+          <MonthAttendance
+            monthAttendance={monthAttendance}
+            onClickAttendance={onClickAttendance}
+            onClickHoliday={onClickHoliday}
+            onChangeAttendanceTimeText={onChangeAttendanceTimeText}
+            monthAttendanceTime={monthAttendanceTime}
+            onClickTimeFix={onClickTimeFix}
+          />
+        </div>
       )}
     </>
   );
