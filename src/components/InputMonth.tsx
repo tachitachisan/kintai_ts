@@ -6,7 +6,7 @@ export const InputMonth = (props: { targetMonth: any; onChangeMonthText: any; ta
       <label>
       <input className="inputYear"
         // disabled={disabled}
-        placeholder="年を入力"
+        placeholder="年"
         value={targetYear}
         onChange={onChangeYearText}
       />
@@ -14,7 +14,7 @@ export const InputMonth = (props: { targetMonth: any; onChangeMonthText: any; ta
       <label>
       <input  className="inputMonth"
         // disabled={disabled}
-        placeholder="月を入力"
+        placeholder="月"
         value={targetMonth}
         onChange={onChangeMonthText}
       />
