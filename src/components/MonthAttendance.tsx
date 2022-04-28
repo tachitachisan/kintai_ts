@@ -1,5 +1,5 @@
-export const MonthAttendance = (props: { monthAttendance: any; onClickAttendance: any; onClickHoliday: any; onChangeAttendanceTimeText: any; monthAttendanceTime: any; onClickTimeFix: any;}) => {
-  const { monthAttendance, onClickAttendance, onClickHoliday, monthAttendanceTime, onClickTimeFix} = props;
+export const MonthAttendance = (props: { monthAttendance: any; onClickAttendance: any; onClickHoliday: any; onChangeAttendanceTimeText: any; monthAttendanceTime: any; onClickTimeFix: any; }) => {
+  const { monthAttendance, onClickAttendance, onClickHoliday, monthAttendanceTime, onClickTimeFix } = props;
   return (
     <div className="monthAttendance-area">
       <ul>

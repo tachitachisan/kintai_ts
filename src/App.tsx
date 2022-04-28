@@ -2,10 +2,10 @@ import { SetStateAction, useState } from 'react'
 import { Header } from "./components/Header";
 import { MonthAttendance } from "./components/MonthAttendance";
 import { Title } from "./components/Title";
-import { InputMonth } from "./components/InputMonth";
-import "./styles.css";
+import { InputYearMonth } from "./components/InputYearMonth";
 import { InputAttendanceTime } from './components/InputAttendanceTime';
 import { AttendanceTimeSum } from './components/AttendanceTimeSum';
+import "./styles.css";
 
 function App() {
   const [targetYear, setTargetYear] = useState("");
@@ -56,7 +56,7 @@ function App() {
   return (
     <>
       <Header />
-      <InputMonth
+      <InputYearMonth
         targetMonth={targetMonthText}
         onChangeMonthText={onChangeMonthText}
         targetYear={targetYearText}
@@ -70,11 +70,11 @@ function App() {
             targetYear={targetYear}
             targetMonth={targetMonth}
           />
-          <InputAttendanceTime
-            onChangeAttendanceTimeText={onChangeAttendanceTimeText}
-          />
           <AttendanceTimeSum
             monthAttendanceTime={monthAttendanceTime}
+          />
+          <InputAttendanceTime
+            onChangeAttendanceTimeText={onChangeAttendanceTimeText}
           />
           <MonthAttendance
             monthAttendance={monthAttendance}
@@ -88,7 +88,6 @@ function App() {
       )}
     </>
   );
-
 }
 
 export default App

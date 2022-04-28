@@ -7,7 +7,7 @@ export const AttendanceTimeSum = (props: { monthAttendanceTime: string[] }) => {
     });
 
     return (
-        <p>
+        <p className="attendanceTimeSum">
             今月の合計勤務時間：{attendanceTimeSum}時間
         </p>
     );

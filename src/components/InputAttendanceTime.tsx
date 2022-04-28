@@ -1,10 +1,10 @@
 export const InputAttendanceTime = (props: { onChangeAttendanceTimeText: any; }) => {
-    const { onChangeAttendanceTimeText} = props;
+    const { onChangeAttendanceTimeText } = props;
     return (
-        <label>勤務時間(h)
-        <input
-          onChange={onChangeAttendanceTimeText}
-        />
-      </label>
+        <label className="inputAttendanceTime">勤務時間(h)
+            <input className="inputAttendanceTime-input"
+                onChange={onChangeAttendanceTimeText}
+            />
+        </label>
     );
-  };
+};
