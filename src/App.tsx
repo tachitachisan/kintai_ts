@@ -37,17 +37,13 @@ function App() {
     newMonthAttendanceTime[index] = attendanceTimeText;
     setMonthAttendanceTime(newMonthAttendanceTime);
   };
-  const onClickAttendance = (index: number) => {
-    const newMonthAttendance: string[] = [...monthAttendance];
-    newMonthAttendance[index] = "出勤";
-    setMonthAttendance(newMonthAttendance);
-  }
-  const onClickHoliday = (index: number) => {
-    const newMonthAttendance: string[] = [...monthAttendance];
-    newMonthAttendance[index] = "休暇";
-    setMonthAttendance(newMonthAttendance);
-  }
 
+  //勤務状態入力ボタン押下時の関数
+  const onClickStatusButton = (index: number, status: string) => {
+    const newMonthAttendance: string[] = [...monthAttendance];
+    newMonthAttendance[index] = status;
+    setMonthAttendance(newMonthAttendance);
+  }
   //年と月からその月の日数を返す関数
   const monthDays = (targetYear: string, targetMonth: string) => {
     return new Date(parseInt(targetYear, 10), parseInt(targetMonth, 10), 0).getDate();
@@ -63,7 +59,6 @@ function App() {
         onChangeYearText={onChangeYearText}
         onClick={onClickDecision}
       />
-
       {(targetMonth !== "" && targetYear !== "") && (
         <div>
           <Title
@@ -78,9 +73,7 @@ function App() {
           />
           <MonthAttendance
             monthAttendance={monthAttendance}
-            onClickAttendance={onClickAttendance}
-            onClickHoliday={onClickHoliday}
-            onChangeAttendanceTimeText={onChangeAttendanceTimeText}
+            onClickStatusButton={onClickStatusButton}
             monthAttendanceTime={monthAttendanceTime}
             onClickTimeFix={onClickTimeFix}
           />
